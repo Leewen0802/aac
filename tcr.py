@@ -15,7 +15,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" Chivas Bot
+helpMessage =""" ETLB
 [Id︎]
 [Mid]
 [Me︎]
@@ -76,7 +76,7 @@ Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid]
-admin=["YOUR_MID_HERE"]
+admin=["ud88795856d91ef52b208b325ff267c56"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -930,7 +930,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {"mid":mmid}
                 cl.sendMessage(msg)
-            elif msg.text in ["é€£çµ¡å…ˆ:ã‚ªãƒ³","K on","Contact on","é¡¯ç¤ºï¼šé–‹"]:
+            elif msg.text in ["Contact on"]:
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
@@ -942,7 +942,7 @@ def bot(op):
                         cl.sendText(msg.to,"already on")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["é€£çµ¡å…ˆ:ã‚ªãƒ•","K off","Contact off","é¡¯ç¤ºï¼šé—œ"]:
+            elif msg.text in ["K off","Contact off"]:
                 if wait["contact"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
@@ -954,7 +954,7 @@ def bot(op):
                         cl.sendText(msg.to,"already off")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["è‡ªå‹•å‚åŠ :ã‚ªãƒ³","Join on","Auto join:on","è‡ªå‹•åƒåŠ ï¼šé–‹"]:
+            elif msg.text in ["Join on","Auto join:on"]:
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
@@ -966,7 +966,7 @@ def bot(op):
                         cl.sendText(msg.to,"already on")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["è‡ªå‹•å‚åŠ :ã‚ªãƒ•","Join off","Auto join:off","è‡ªå‹•åƒåŠ ï¼šé—œ"]:
+            elif msg.text in ["Join off","Auto join:off"]:
                 if wait["autoJoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
@@ -986,20 +986,20 @@ def bot(op):
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Invitation refused turned off\nTo turn on please specify the number of people and send")
                         else:
-                            cl.sendText(msg.to,"å…³äº†é‚€è¯·æ‹’ç»ã€‚è¦æ—¶å¼€è¯·æŒ‡å®šäººæ•°å‘é€")
+                            cl.sendText(msg.to,"ERROR")
                     else:
                         num =  int(strnum)
                         wait["autoCancel"]["on"] = True
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,strnum + "The group of people and below decided to automatically refuse invitation")
                         else:
-                            cl.sendText(msg.to,strnum + "ä½¿äººä»¥ä¸‹çš„å°ç»„ç”¨è‡ªåŠ¨é‚€è¯·æ‹’ç»")
+                            cl.sendText(msg.to,strnum + "ERROR")
                 except:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Value is wrong")
                     else:
                         cl.sendText(msg.to,"Bizarre ratings")
-            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ³","Leave on","Auto leave:on","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé–‹"]:
+            elif msg.text in ["Leave on","Auto leave:on"]:
                 if wait["leaveRoom"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
@@ -1010,8 +1010,8 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å¼€ã€‚")
-            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ•","Leave off","Auto leave:off","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé—œ"]:
+                        cl.sendText(msg.to,"ERROR")
+            elif msg.text in ["Leave off","Auto leave:off"]:
                 if wait["leaveRoom"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
@@ -1023,7 +1023,7 @@ def bot(op):
                         cl.sendText(msg.to,"done")
                     else:
                         cl.sendText(msg.to,"already")
-            elif msg.text in ["å…±æœ‰:ã‚ªãƒ³","Share on","Share on"]:
+            elif msg.text in ["Share on","Share on"]:
                 if wait["timeline"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
@@ -1034,8 +1034,8 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å¼€ã€‚")
-            elif msg.text in ["å…±æœ‰:ã‚ªãƒ•","Share off","Share off"]:
+                        cl.sendText(msg.to,"ERROR")
+            elif msg.text in ["Share off","Share off"]:
                 if wait["timeline"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
@@ -1046,7 +1046,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å…³æ–­ã€‚")
+                        cl.sendText(msg.to,"ERROR")
             elif msg.text in ["Set"]:
                 md = ""
                 if wait["contact"] == True: md+=" Contact : on\n"
@@ -1073,12 +1073,12 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"There is no album")
                     else:
-                        cl.sendText(msg.to,"ç›¸å†Œæ²¡åœ¨ã€‚")
+                        cl.sendText(msg.to,"ERROR")
                 else:
                     if wait["lang"] == "JP":
                         mg = "The following is the target album"
                     else:
-                        mg = "ä»¥ä¸‹æ˜¯å¯¹è±¡çš„ç›¸å†Œ"
+                        mg = "ERROR"
                     for y in album["result"]["items"]:
                         if "photoCount" in y:
                             mg += str(y["title"]) + ":" + str(y["photoCount"]) + "sheet\n"
@@ -1092,12 +1092,12 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"There is no album")
                     else:
-                        cl.sendText(msg.to,"ç›¸å†Œæ²¡åœ¨ã€‚")
+                        cl.sendText(msg.to,"ERROR")
                 else:
                     if wait["lang"] == "JP":
                         mg = "The following is the target album"
                     else:
-                        mg = "ä»¥ä¸‹æ˜¯å¯¹è±¡çš„ç›¸å†Œ"
+                        mg = "ERROR"
                     for y in album["result"]["items"]:
                         if "photoCount" in y:
                             mg += str(y["title"]) + ":" + str(y["photoCount"]) + "sheet\n"
@@ -1114,8 +1114,8 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,str(i) + "Deleted albums")
                 else:
-                    cl.sendText(msg.to,str(i) + "åˆ é™¤äº†äº‹çš„ç›¸å†Œã€‚")
-            elif msg.text in ["Group id","ç¾¤çµ„å…¨id"]:
+                    cl.sendText(msg.to,str(i) + "ERROR")
+            elif msg.text in ["Group id"]:
                 gid = cl.getGroupIdsJoined()
                 h = ""
                 for i in gid:
@@ -1128,7 +1128,7 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"All invitations have been refused")
                 else:
-                    cl.sendText(msg.to,"æ‹’ç»äº†å…¨éƒ¨çš„é‚€è¯·ã€‚")
+                    cl.sendText(msg.to,"ERROR")
             elif "album removeâ†’" in msg.text:
                 gid = msg.text.replace("album removeâ†’","")
                 albums = cl.getAlbum(gid)["result"]["items"]
@@ -1140,8 +1140,8 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,str(i) + "Albums deleted")
                 else:
-                    cl.sendText(msg.to,str(i) + "åˆ é™¤äº†äº‹çš„ç›¸å†Œã€‚")
-            elif msg.text in ["è‡ªå‹•è¿½åŠ :ã‚ªãƒ³","Add on","Auto add:on","è‡ªå‹•è¿½åŠ ï¼šé–‹"]:
+                    cl.sendText(msg.to,str(i) + "ERROR")
+            elif msg.text in ["Add on","Auto add:on"]:
                 if wait["autoAdd"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already on")
@@ -1152,8 +1152,8 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å¼€ã€‚")
-            elif msg.text in ["è‡ªå‹•è¿½åŠ :ã‚ªãƒ•","Add off","Auto add:off","è‡ªå‹•è¿½åŠ ï¼šé—œ"]:
+                        cl.sendText(msg.to,"ERROR")
+            elif msg.text in ["Add off","Auto add:off"]:
                 if wait["autoAdd"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already off")
@@ -1164,7 +1164,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å…³æ–­ã€‚")
+                        cl.sendText(msg.to,"ERROR")
             elif "Message change: " in msg.text:
                 wait["message"] = msg.text.replace("Message change: ","")
                 cl.sendText(msg.to,"message changed")
@@ -1174,7 +1174,7 @@ def bot(op):
                     cl.sendText(msg.to,"message changed")
                 else:
                     cl.sendText(msg.to,"doneã€‚")
-            elif msg.text in ["Message","è‡ªå‹•è¿½åŠ å•å€™èªžç¢ºèª"]:
+            elif msg.text in ["Message"]:
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"message change to\n\n" + wait["message"])
                 else:
@@ -1193,7 +1193,7 @@ def bot(op):
                 else:
                     wait["comment"] = c
                     cl.sendText(msg.to,"changed\n\n" + c)
-            elif msg.text in ["ã‚³ãƒ¡ãƒ³ãƒˆ:ã‚ªãƒ³","Comment on","Comment:on","è‡ªå‹•é¦–é ç•™è¨€ï¼šé–‹"]:
+            elif msg.text in ["Comment on","Comment:on"]:
                 if wait["commentOn"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
@@ -1204,8 +1204,8 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å¼€ã€‚")
-            elif msg.text in ["ã‚³ãƒ¡ãƒ³ãƒˆ:ã‚ªãƒ•","Comment on","Comment off","è‡ªå‹•é¦–é ç•™è¨€ï¼šé—œ"]:
+                        cl.sendText(msg.to,"ERROR")
+            elif msg.text in ["Comment on","Comment off"]:
                 if wait["commentOn"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
@@ -1216,8 +1216,8 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
-                        cl.sendText(msg.to,"è¦äº†å…³æ–­ã€‚")
-            elif msg.text in ["Comment","ç•™è¨€ç¢ºèª"]:
+                        cl.sendText(msg.to,"ERROR")
+            elif msg.text in ["Comment"]:
                 cl.sendText(msg.to,"message changed to\n\n" + str(wait["comment"]))
             elif msg.text in ["Gurl"]:
                 if msg.toType == 2:
@@ -1635,9 +1635,9 @@ def bot(op):
                                 kc.sendText(msg.to,"Succes Cv")
 #-----------------------------------------------
             elif msg.text in ["Test"]:
-                ki.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
-                kk.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
-                kc.sendText(msg.to,"Ok Cv 􀨁􀄻double thumbs up􏿿")
+                ki.sendText(msg.to,"Ok")
+                kk.sendText(msg.to,"Ok")
+                kc.sendText(msg.to,"Ok")
 #-----------------------------------------------
             elif "Bc " in msg.text:
 				bctxt = msg.text.replace("Bc ","")
@@ -1647,36 +1647,36 @@ def bot(op):
 #-----------------------------------------------
 
             elif msg.text in ["Cv say hi"]:
-                ki.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Hi buddy 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Hi buddy")
+                kk.sendText(msg.to,"Hi buddy")
+                kc.sendText(msg.to,"Hi buddy")
 
 #-----------------------------------------------
 
             elif msg.text in ["Cv say hinata pekok"]:
-                ki.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Hinata pekok 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Hinata pekok")
+                kk.sendText(msg.to,"Hinata pekok")
+                kc.sendText(msg.to,"Hinata pekok")
             elif msg.text in ["Cv say didik pekok"]:
-                ki.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Didik pekok 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Didik pekok")
+                kk.sendText(msg.to,"Didik pekok")
+                kc.sendText(msg.to,"Didik pekok")
             elif msg.text in ["Cv say bobo ah","Bobo dulu ah"]:
-                ki.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Have a nice dream Cv 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Have a nice dream Cv")
+                kk.sendText(msg.to,"Have a nice dream Cv")
+                kc.sendText(msg.to,"Have a nice dream Cv")
             elif msg.text in ["Cv say chomel pekok"]:
-                ki.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"Chomel pekok 􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"Chomel pekok")
+                kk.sendText(msg.to,"Chomel pekok")
+                kc.sendText(msg.to,"Chomel pekok")
             elif msg.text in ["#welcome"]:
                 ki.sendText(msg.to,"Selamat datang di Chivas Family Room")
                 kk.sendText(msg.to,"Jangan nakal ok!")
 #-----------------------------------------------
             elif msg.text in ["PING","Ping","ping"]:
-                ki.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kk.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
-                kc.sendText(msg.to,"PONG 􀨁􀄻double thumbs up􏿿􀜁􀅔Har Har􏿿")
+                ki.sendText(msg.to,"PONG")
+                kk.sendText(msg.to,"PONG")
+                kc.sendText(msg.to,"PONG")
 #-----------------------------------------------
             elif msg.text in ["Respon","respon"]:
                 ki.sendText(msg.to,"Cv1")
